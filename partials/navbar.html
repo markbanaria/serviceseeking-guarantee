@@ -1,0 +1,57 @@
+   <section class="main-nav">
+      <div class="container">
+         <div class="row">
+            <ul class="nav-list col-md-12">
+               <li class="nav-drawer-button nav-button" ng-click="$parent.drawershow=!drawershow">
+                  <i class="fa fa-bars"></i>
+               </li>                
+               <li class="serviceseeking-logo">
+                  <img src="assets/logo-full.png" />
+               </li>
+               <li class="nav-links" ng-class="{active: option1open}">
+                  <a href="#/option1">Option 1</a>
+               </li>   
+               <li class="nav-links" ng-class="{active: option2open}">
+                  <a href="#/option2">Option 2</a>
+               </li> 
+               <li class="nav-links" ng-class="{active: option3open}">
+                  <a href="#/option3">Option 3</a>
+               </li>     
+               <div class="user-dropdown dropdown right">
+                  <li class="dropdown-toggle" data-toggle="dropdown">
+                     <a class="username">Timothy Veron</a>           
+                     <i class="fa fa-caret-down right"></i>
+                  </li>
+                  <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                     <li><a class="dropdown-option" role="menuitem">Profile</a></li>
+                     <li><a class="dropdown-option" role="menuitem">Settings</a></li>
+                     <li class="divider"></li>
+                     <li><a class="dropdown-option" role="menuitem">Work</a></li>
+                     <li><a class="dropdown-option" role="menuitem">Log Out</a></li>
+                  </ul>
+               </div>  
+               <li class="nav-links right">
+                  <a>Get Quotes</a>
+               </li>                 
+            </ul>
+         </div>
+      </div>
+   </section>   
+
+   <section class="sub-nav">
+      <div class="container">
+         <div class="row">
+            <ul class="col-md-12 nav-list">
+               <li class="nav-links">
+                  <a>My Jobs</a>
+               </li>
+               <li class="nav-links">
+                  <a>Leave Feedback</a>
+               </li>
+               <li class="nav-links right">
+                  <a>Find Work</a>
+               </li>          
+            </ul>
+         </div>
+      </div>
+   </section>

@@ -1,0 +1,68 @@
+@import 'ssau/ssau';
+@import 'demo-animations';
+
+//instructional
+
+#document-navigation {
+	z-index: 2;
+}
+
+.main-header {
+	margin-top: 0;
+	padding: 60px 0 20px 0;
+
+	h1 { color: white; }
+
+	background: $blue-light;
+}
+
+.instructions {
+	background: $k05;
+	padding-bottom: 64px;
+
+	p { 
+		padding-top: 4px;
+		margin-top: 0;
+		color: $k65;
+	}
+
+	h5 { padding-bottom: 15px; }
+}
+
+.web-guide-sample {
+	padding: 0 25px;
+	box-sizing: border-box;
+}
+
+.sidebar {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.divider {
+	border-top: 1px solid $k30;
+
+	&.bold {		
+		border-top: 8px solid rgba(0,0,0,0.65);
+		margin-bottom: 8px;		
+	}
+}
+
+pre {
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	border: none;
+
+	code {
+		margin: 0;
+		padding: 24px 24px 32px 12px!important;
+		min-width: 100%;
+
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		.dim { opacity: 0.3; }
+	}
+
+}

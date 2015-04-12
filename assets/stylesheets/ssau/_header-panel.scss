@@ -1,0 +1,39 @@
+#headerpanel, #detailspanel {
+	h1 {
+		color: $blue-dark;
+		text-align: center;
+		font-size: 50px;
+		font-weight: 900;
+		padding: 35px 0;
+	}
+	h2 {
+		color: $k45;
+		text-align: center;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 1.45em;
+	}
+
+	.badge-box {
+		text-align: center;
+
+		.badge-image {
+			height: 240px;
+		}
+	}
+}
+
+
+#headerpanel.option3 {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.6)), url('../images/banner2.jpg');
+	background-size: cover;
+	padding-bottom: 80px;
+
+	h1, h2 {
+		color: white;
+	}
+
+	h2 {
+		font-weight: 800;
+	}
+}

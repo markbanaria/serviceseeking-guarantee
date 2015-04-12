@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+   <!-- libraries -->
+   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+   <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+   <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+   <link type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" ></link>
+   <link type="text/css" href="bower_components/fontawesome/css/font-awesome.css" rel="stylesheet" ></link>
+
+   <!-- local -->
+   <script type="text/javascript" src="javascripts/app.js"></script>
+   <script type="text/javascript" src="javascripts/routes.js"></script>
+   <link type="text/css" href="assets/stylesheets/style.css" rel="stylesheet" ></link>
+
+   <!-- highlightjs -->
+   <script type="text/javascript" src="bower_components/highlightjs/highlight.pack.js"></script>
+   <link type="text/css" href="bower_components/highlightjs/styles/ssau-code.css" rel="stylesheet" ></link>
+   <script>hljs.initHighlightingOnLoad();</script>
+   
+   <meta charset="utf-8">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+
+<body ng-app="ssauguarantee" ng-controller="maincontroller" id="wrapper">	
+	<div class="ng-view"></div>
+	<footersection></footersection>
+</body>

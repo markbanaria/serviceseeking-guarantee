@@ -1,0 +1,25 @@
+
+.dropdown-menu {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border: none;
+
+	padding: 0 0 0 0;
+	margin: 0;
+	width: auto;
+
+	li a.dropdown-option {
+		padding: 16px 32px;
+		width: 100%;
+		max-width: 100%;
+		float: none;
+
+		&.user-dropdown-options {
+			font-weight: 600;
+		}
+	}
+
+	li:hover a { opacity: 1; }				
+}

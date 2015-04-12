@@ -1,0 +1,35 @@
+#contactpanel {
+	background: #E2E1E1;
+	margin-top: 80px;
+	padding: 60px 0;
+
+	h1, h2, h3 {
+		text-align: center;
+	}
+
+	h1 {
+		color: $blue-dark;
+		font-size: 36px;
+		font-weight: 900;
+		line-height: 48px;
+		margin: 0;
+	}
+
+
+	h3 {
+		font-size: 18px;
+		line-height: 27px;
+		color: #605D5D;
+		font-weight: 300;
+		margin: 0;
+
+		.blue {
+			font-weight: 800;
+			color: $blue-main;
+		}
+	}
+
+	&.option2, &.option3 {
+		margin-top: 0;
+	}
+}

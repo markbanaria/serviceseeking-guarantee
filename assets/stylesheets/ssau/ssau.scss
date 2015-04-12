@@ -1,0 +1,182 @@
+@import '_fonts';
+@import '_colors';
+
+//generic
+body * {
+	list-style-type: none;
+	text-decoration: none;
+}
+
+//text
+body {
+	background: #ECEBEB;
+}
+
+h1,h2, h3, h4, h5, p, a {
+	padding: 0;
+	margin: 0 0 16px 0;
+	color: $k85;
+	font-family: "prx-nova", sans-serif;
+}
+
+h1 {
+	line-height: 48px;
+	font-size: 36px;
+	color: $k65;
+}
+
+h2 {
+	font-weight: 800;
+	color: $k65;
+}
+
+h3 {
+	font-weight: 800;
+	color: $k65;
+}
+
+h4 {
+	line-height: 1em; 
+	font-weight: 800;
+	color: $k65;
+	text-transform: uppercase;
+}
+
+h5 {
+	font-size: 14px;
+	font-weight: 600;
+	color: $blue-light;
+	width: 100%;
+	margin-top: 0;	
+}
+
+a, i, p { line-height: 16px; }
+
+p.copy, h1, a {	font-weight: 300; }
+
+p.copy {
+	font-size: 12px;	
+}
+
+.notes { 
+	font-style: italic; 
+	font-size: 12px;
+}
+
+a, a:hover {
+	text-decoration: none;
+	margin: 0;
+}
+
+.panel-title {
+	color: $k65;
+}
+
+//clearfix
+
+.container, .clearfix {
+  *zoom: 1;
+  display: block;
+}
+.container:before, .container:after, .clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.container:after, .clearfix:after {
+  clear: both;
+}
+
+//specific
+
+section {
+	padding: 64px 0 0 0;
+	margin: 0;
+
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+
+
+	.container {
+		margin-bottom: 0;
+	}
+
+	.container {
+		section {
+			padding-top: 0;
+			.container {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.row.space { margin-top: 32px; }
+
+.ssaubutton {
+	margin: 0;
+
+	outline: none;
+	border: none;
+	background: $blue-main;
+	cursor: pointer;
+
+	color: white;
+	font-weight: 800;
+
+	display: block;
+	float: left;
+	
+	&.large {		
+		padding: 24px 32px;
+	}
+
+	&.medium {
+		padding: 12px 24px;
+	}
+
+	&.right {
+		float: right;
+	}
+
+	&:hover {
+		background: $blue-light;
+		color: white;
+	}
+
+	&.active {
+		background: $blue-medium;
+		color: white;
+	}
+
+	&.orange {
+		background: orange;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&.active {
+			background: darkorange;
+		}
+	}
+
+	&.full {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+@import '_dropdown';
+@import '_nav';
+@import '_drawer';
+@import '_header-panel';
+@import '_form-panel';
+@import '_details-panel';
+@import '_contact-panel';

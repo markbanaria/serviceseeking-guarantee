@@ -1,0 +1,116 @@
+#formpanel {
+	form {
+		background: #E2E1E1;
+		padding:60px;
+
+		&.confirmed {
+			background: $blue-main;
+			-webkit-border-radius: 30px;
+			-moz-border-radius: 30px;
+			border-radius: 30px;
+			border: $blue-dark 16px solid;
+		}
+	}
+
+	h3 {
+		font-size: 24px;
+		color: $blue-dark;
+		font-weight: 900;
+		line-height: 36px;
+		padding-bottom: 36px;
+	}
+
+	.datewidget {
+		padding-bottom: 36px;
+	}
+
+	input[type="submit"], button {
+		width: 100%;
+		background: $blue-light;
+		color: white;
+		font-size: 24px;
+		font-weight: 800;
+		padding: 20px 0;
+		border: none;
+		outline: none;
+		font-family: "prx-nova";
+
+		&.inactive {
+			background: rgba(0,0,0,0.2);
+			color: rgba(255,255,255,0.2);
+			cursor: default;
+		}
+	}
+
+	button {
+		width: 50%;
+		float: left;
+		font-size: 18px;
+		padding: 16px 0;
+		margin-top: 10px;
+		margin-bottom: 35px;
+
+		&.active {
+			background: $blue-dark
+		}
+	}
+
+	.confirmation {
+		h1, h3 {
+			text-align: center;
+		}
+
+		h3 {
+			padding-bottom: 0;
+			color: rgba(255,255,255,0.8);
+		}
+
+		h1 {
+			font-size: 24px;
+			color: rgba(255,255,255,0.6);
+
+			.title {
+				color: white;
+				font-weight: 900;
+				font-size: 36px;
+			}
+		}
+
+		.close-confirmation {
+			text-align: right;
+			font-size: 24px;
+			color: rgba(255,255,255,0.4);
+			margin-top: -20px;
+		}
+	}
+
+	&.option2, &.option3 {
+		background: $blue-main;
+		margin-top: 64px;
+		padding-top: 0;
+
+		form {
+			background: transparent;
+
+			h3 {
+				color: white;
+			}
+
+			&.confirmed {
+				-webkit-border-radius: 30px;
+				-moz-border-radius: 30px;
+				border-radius: 30px;
+				border: none;
+			}
+		}
+
+		input {
+			background: orange;
+		}
+	}
+
+	&.option3 {
+		margin-top: 0;
+	}
+
+}

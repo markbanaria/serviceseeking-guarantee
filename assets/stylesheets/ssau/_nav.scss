@@ -1,0 +1,251 @@
+
+.main-nav, .sub-nav {
+	padding-top: 0;
+	background-color: $blue-main;
+
+	.nav-list {	margin-bottom: 0; }
+	
+	.nav-links, .user-dropdown, .subnav-dropdown, .nav-button {
+		display: block;
+		float: left;
+
+		&.right { float: right; }
+
+		cursor: pointer;
+
+		a {
+			max-width: 180px;	
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		a, i {
+			color: white;
+			opacity: 0.85;
+
+			display: block;
+			float: left;
+			padding: 24px;
+		}
+
+		&.active, &:hover, &.open {
+			i, a:not(.dropdown-option) { opacity: 1; }
+		}
+
+		a.notification {
+			font-size: 10px;
+			font-weight: 600;
+			line-height: 10px;
+			text-align: center;
+
+			padding: 3px 5px 3px 4px;
+			margin: 14px 16px 14px -8px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+
+			background: tomato;
+			opacity: 1;
+		}
+	}
+
+	.nav-button {
+
+		i, a {				
+			padding: 9px 16px;
+			margin: 15px;
+
+			text-align: center;
+			font-weight: 800;
+
+			background: $blue-dark;
+
+			opacity: 1;
+
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+
+			-webkit-transition: all ease-in 0.2s;
+			-moz-transition: all ease-in 0.2s;
+		}
+
+		&:hover {
+			i, a {
+				background: $blue-medium;
+			}
+		}
+
+		&.nav-drawer-button {
+			i, a {
+				background: rgba(255,255,255,0.2);			
+				width: 34px;
+				padding: 9px;
+			}
+
+			&:hover {
+				i, a {
+					background: rgba(255,255,255,0.35);
+				}
+			}			
+		}
+
+
+	}
+
+	.nav-drawer-button {
+		display: none;
+	}
+
+	.nav-list i {	
+		line-height: 1.1428em;
+		&.right { padding-left: 0; }
+		&.left { padding-right: 0; } 
+	}	
+
+}
+
+.main-nav {
+	li.nav-links:hover, div.user-dropdown:not(.open):hover { 
+		background: $blue-light; 
+	}
+
+	.nav-links i {
+		margin-right: -8px;
+	}
+
+	.serviceseeking-logo img {
+		height: 22px;
+		margin: 19px 24px 23px 0;
+
+		display: block;
+		float: left;
+	}
+
+	.user-dropdown {
+		cursor: pointer;
+
+		li.dropdown-toggle { 
+			float: left; 
+			display: block; 
+		}
+
+		&.open { 
+			background-color: $blue-medium; 
+		}
+
+		.avatar {
+			display: block;
+			float: left;
+
+			img {
+				display: block;
+				float: left;
+				height: 32px;
+				width: 32px;
+				margin: 16px -12px 16px 24px;
+			}	
+
+		}
+
+		.username {		
+			max-width: 180px;	
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.dropdown-menu {
+			padding: 24px 0 0 0;				
+			width: 100%;
+
+			background: $blue-medium;
+
+			li a.dropdown-option {
+				font-weight: 600;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+
+				&:hover {
+					opacity: 1;
+					color: white;
+					background: rgba(255,255,255,0.16);
+				}
+			}
+
+			li.divider {
+				background: rgba(255,255,255,0.16);
+				border: none;
+				padding: 0.5px;
+				margin: 0;
+			}
+		}
+	}	
+}
+
+.sub-nav {
+	background: $blue-dark;
+
+	.nav-list {
+		a, i { padding: 16px; }
+
+		.nav-links {
+			&:hover, &.active { background: $blue-medium; }
+			&:first-child { margin-left: -16px; }
+		}
+
+		.subnav-dropdown {
+			&.open, &:hover { 
+				background: $blue-medium; 
+				i { opacity: 1; } 
+			}
+
+			.dropdown-menu {
+				background: $blue-medium;
+			}
+
+			li a.dropdown-option {
+				padding: 16px;
+
+				&:hover {
+					opacity: 1;
+					color: white;
+					background: rgba(255,255,255,0.16);
+				}
+			}
+		}		
+	}
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+		.main-nav {
+		    .nav-links, .user-dropdown {
+		    	display: none;
+		    }
+
+		    .nav-button {
+		    	display: none;
+		    }
+
+		    .nav-drawer-button {
+		    	display: block;
+		    }
+		}
+
+		.sub-nav {
+			display: none;
+		}    
+}
+
+@media screen and (max-width: 342px) {
+	.main-nav {
+		.serviceseeking-logo img {
+			height: 18px;
+			margin-top: 21px;
+
+		}
+	}
+}
