@@ -2,14 +2,6 @@
 	form {
 		background: #E2E1E1;
 		padding:60px;
-
-		&.confirmed {
-			background: $blue-main;
-			-webkit-border-radius: 30px;
-			-moz-border-radius: 30px;
-			border-radius: 30px;
-			border: $blue-dark 16px solid;
-		}
 	}
 
 	h3 {
@@ -55,6 +47,16 @@
 		}
 	}
 
+	&.confirmed {
+		form {
+			background: $blue-main;
+			-webkit-border-radius: 30px;
+			-moz-border-radius: 30px;
+			border-radius: 30px;
+			border: $blue-dark 16px solid;
+		}	
+	}	
+
 	.confirmation {
 		h1, h3 {
 			text-align: center;
@@ -84,7 +86,7 @@
 		}
 	}
 
-	&.option2, &.option3 {
+	&.option2 {
 		background: $blue-main;
 		margin-top: 64px;
 		padding-top: 0;
@@ -95,22 +97,50 @@
 			h3 {
 				color: white;
 			}
-
-			&.confirmed {
-				-webkit-border-radius: 30px;
-				-moz-border-radius: 30px;
-				border-radius: 30px;
-				border: none;
-			}
 		}
 
 		input {
 			background: orange;
 		}
+
+		&.confirmed {
+			form {
+				-webkit-border-radius: 30px;
+				-moz-border-radius: 30px;
+				border-radius: 30px;
+				border: none;
+			}
+		}		
 	}
 
 	&.option3 {
 		margin-top: 0;
+		padding-top: 0;
+		background: #E2E1E1;
+
+		form {
+			background: transparent;
+
+			input[type="submit"] {
+				background: #70BD36;
+
+				&.inactive {
+					background: rgba(0,0,0,0.2);
+					color: rgba(255,255,255,0.2);
+					cursor: default;
+				}
+			}
+		}
+
+		&.confirmed {
+			background: $blue-main;
+			form {
+				-webkit-border-radius: 30px;
+				-moz-border-radius: 30px;
+				border-radius: 30px;
+				border: none;				
+			}
+		}
 	}
 
 }

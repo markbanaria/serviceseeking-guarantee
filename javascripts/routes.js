@@ -12,6 +12,6 @@ ssauguarantee.config(function ($routeProvider) {
         controller: 'option3controller',
         templateUrl: 'partials/option3.html' 
     })
-	.otherwise( {redirectTo: '/option1'} )
+	.otherwise( {redirectTo: '/option3'} )
 
 });

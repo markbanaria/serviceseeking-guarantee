@@ -1,8 +1,8 @@
-<section ng-class="{option1: option1open, option2: option2open, option3: option3open}" id="formpanel" >
+<section ng-class="{option1: option1open, option2: option2open, option3: option3open, confirmed: showconfirmation}" id="formpanel">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<form ng-class="{confirmed: showconfirmation}">
+				<form>
 					<div class="row" ng-hide="showconfirmation">
 						<h3 class="col-md-8">Are you hiring Crisp Architects for your Home Design job?</h3>
 						<div class="col-md-4">
@@ -14,7 +14,7 @@
 						<h3 class="col-md-8">When is the job going ahead?</h3>
 						<img class="datewidget col-md-4" src="assets/date-picker.png" />
 					</div>	
-					<input type="submit" ng-class="{inactive: ishiring==false}" ng-click="handleSubmit()" ng-hide="showconfirmation"/>	
+					<input type="submit" value="Get Protected" ng-class="{inactive: ishiring==false}" ng-click="handleSubmit()" ng-hide="showconfirmation"/>	
 					<div class="confirmation" ng-show="showconfirmation">
 						<i class="fa fa-times close-confirmation col-md-1 col-md-offset-11" ng-click="showconfirmation = false"></i>
 						<h3>Thanks for letting us know</h3>

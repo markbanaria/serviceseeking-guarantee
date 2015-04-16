@@ -434,12 +434,6 @@ section {
 #formpanel form {
   background: #E2E1E1;
   padding: 60px; }
-  #formpanel form.confirmed {
-    background: #006da0;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    border: #005581 16px solid; }
 #formpanel h3 {
   font-size: 24px;
   color: #005581;
@@ -471,6 +465,12 @@ section {
   margin-bottom: 35px; }
   #formpanel button.active {
     background: #005581; }
+#formpanel.confirmed form {
+  background: #006da0;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border: #005581 16px solid; }
 #formpanel .confirmation h1, #formpanel .confirmation h3 {
   text-align: center; }
 #formpanel .confirmation h3 {
@@ -488,23 +488,40 @@ section {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.4);
   margin-top: -20px; }
-#formpanel.option2, #formpanel.option3 {
+#formpanel.option2 {
   background: #006da0;
   margin-top: 64px;
   padding-top: 0; }
-  #formpanel.option2 form, #formpanel.option3 form {
+  #formpanel.option2 form {
     background: transparent; }
-    #formpanel.option2 form h3, #formpanel.option3 form h3 {
+    #formpanel.option2 form h3 {
       color: white; }
-    #formpanel.option2 form.confirmed, #formpanel.option3 form.confirmed {
+  #formpanel.option2 input {
+    background: orange; }
+  #formpanel.option2.confirmed form {
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: none; }
+#formpanel.option3 {
+  margin-top: 0;
+  padding-top: 0;
+  background: #E2E1E1; }
+  #formpanel.option3 form {
+    background: transparent; }
+    #formpanel.option3 form input[type="submit"] {
+      background: #70BD36; }
+      #formpanel.option3 form input[type="submit"].inactive {
+        background: rgba(0, 0, 0, 0.2);
+        color: rgba(255, 255, 255, 0.2);
+        cursor: default; }
+  #formpanel.option3.confirmed {
+    background: #006da0; }
+    #formpanel.option3.confirmed form {
       -webkit-border-radius: 30px;
       -moz-border-radius: 30px;
       border-radius: 30px;
       border: none; }
-  #formpanel.option2 input, #formpanel.option3 input {
-    background: orange; }
-#formpanel.option3 {
-  margin-top: 0; }
 
 #detailspanel .herotext, #detailspanel2 .herotext {
   text-align: center;
@@ -517,16 +534,11 @@ section {
   background: #E2E1E1;
   padding: 60px;
   margin: 16px; }
-#detailspanel p, #detailspanel2 p {
+#detailspanel p, #detailspanel ul li, #detailspanel2 p, #detailspanel2 ul li {
   font-size: 16px;
   line-height: 1.45em;
-  color: #605D5D; }
-  #detailspanel p .blue, #detailspanel2 p .blue {
-    color: #005581;
-    font-weight: 900; }
-  #detailspanel p .black, #detailspanel2 p .black {
-    color: #4B4848;
-    font-weight: 900; }
+  color: #605D5D;
+  list-style-type: disc; }
 #detailspanel h3, #detailspanel2 h3 {
   color: #005581;
   font-weight: 900;
@@ -540,7 +552,7 @@ section {
 
 #detailspanel.option3 {
   padding-top: 180px;
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.85)), url("../images/banner3.jpg");
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.85)), url("../images/banner4.jpg");
   background-size: cover;
   padding-bottom: 32px;
   background-position: 0% 55%; }
