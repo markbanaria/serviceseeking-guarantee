@@ -52,10 +52,11 @@ directive('formpanel', function() {
 		scope: {option1open: "=", option2open: "=", option3open: "="},
 		controller: function($scope) {
 			$scope.ishiring = false;
+			$scope.ishiringother = false;
+			$scope.isnothiring = false;
 			$scope.showconfirmation = false;
 			$scope.handleSubmit = function() {
-				console.log($scope.ishiring);
-				if($scope.ishiring) {
+				if($scope.ishiring||$scope.ishiringother) {
 					$scope.showconfirmation = true;
 					$('#formpanel').goTo();
 				}

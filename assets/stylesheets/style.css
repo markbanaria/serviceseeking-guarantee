@@ -140,6 +140,9 @@ section {
     width: 100%;
     text-align: center; }
 
+.right {
+  float: right; }
+
 .dropdown-menu {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -438,8 +441,9 @@ section {
   font-size: 24px;
   color: #005581;
   font-weight: 900;
-  line-height: 36px;
-  padding-bottom: 36px; }
+  line-height: 36px; }
+#formpanel .form-item {
+  margin-bottom: 36px; }
 #formpanel .datewidget {
   padding-bottom: 36px; }
 #formpanel input[type="submit"], #formpanel button {
@@ -451,7 +455,8 @@ section {
   padding: 20px 0;
   border: none;
   outline: none;
-  font-family: "prx-nova"; }
+  font-family: "prx-nova";
+  margin-top: 16px; }
   #formpanel input[type="submit"].inactive, #formpanel button.inactive {
     background: rgba(0, 0, 0, 0.2);
     color: rgba(255, 255, 255, 0.2);
@@ -460,11 +465,63 @@ section {
   width: 50%;
   float: left;
   font-size: 18px;
-  padding: 16px 0;
+  color: #005581;
+  padding: 12px 0;
   margin-top: 10px;
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  background: #ECEBEB;
+  border: 1px lightgray solid;
+  border-right: none;
+  -webkit-box-sizing: border-box; }
+  #formpanel button:last-child {
+    border-right: 1px lightgray solid; }
   #formpanel button.active {
+    background: #005581;
+    color: white; }
+#formpanel .dropdown {
+  background: #ECEBEB;
+  margin-top: 14px;
+  padding: 4px 0px;
+  border: 1px lightgray solid;
+  border-right: none;
+  cursor: pointer; }
+  #formpanel .dropdown:last-child {
+    border-right: 1px lightgray solid; }
+  #formpanel .dropdown .dropdown-toggle {
+    padding: 0 32px; }
+    #formpanel .dropdown .dropdown-toggle a, #formpanel .dropdown .dropdown-toggle i {
+      color: #005581;
+      font-weight: 800;
+      line-height: 36px; }
+  #formpanel .dropdown h5 {
+    color: #005581;
+    font-size: 12px;
+    margin-bottom: 3px;
+    opacity: 0.7; }
+  #formpanel .dropdown .dropdown-menu {
+    background: #005581;
+    min-width: 100%;
+    max-width: 100%;
+    border-top: 1px solid #2f87b0; }
+    #formpanel .dropdown .dropdown-menu .dropdown-option:hover {
+      background: #006da0; }
+  #formpanel .dropdown.open {
+    padding: 5px 1px;
+    border: none;
     background: #005581; }
+    #formpanel .dropdown.open a, #formpanel .dropdown.open i, #formpanel .dropdown.open h5 {
+      color: white; }
+  #formpanel .dropdown.businesslist {
+    padding-bottom: 12px; }
+    #formpanel .dropdown.businesslist .dropdown-option {
+      padding: 14px 36px; }
+      #formpanel .dropdown.businesslist .dropdown-option a {
+        padding: 0;
+        max-width: 100%; }
+        #formpanel .dropdown.businesslist .dropdown-option a:hover {
+          background: transparent; }
+    #formpanel .dropdown.businesslist .special-option {
+      background: #0d395c; }
 #formpanel.confirmed form {
   background: #006da0;
   -webkit-border-radius: 30px;
@@ -552,7 +609,7 @@ section {
 
 #detailspanel.option3 {
   padding-top: 180px;
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.85)), url("../images/banner4.jpg");
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.85)), url("../images/banner5.jpg");
   background-size: cover;
   padding-bottom: 32px;
   background-position: 0% 55%; }

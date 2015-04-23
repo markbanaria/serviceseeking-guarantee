@@ -3,18 +3,90 @@
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<form>
-					<div class="row" ng-hide="showconfirmation">
+					<div class="row form-item" ng-hide="showconfirmation">
 						<h3 class="col-md-8">Are you hiring Crisp Architects for your Home Design job?</h3>
 						<div class="col-md-4">
-							<button ng-class="{active: ishiring}" ng-click="ishiring = !ishiring">Yes</button>
-							<button ng-class="{active: !ishiring}" ng-click="ishiring = !ishiring">No</button>
+							<button ng-class="{active: ishiring}" ng-click="ishiring = !ishiring; isnothiring = false;">Yes</button>
+							<button ng-class="{active: isnothiring}" ng-click="isnothiring = !isnothiring; ishiring = false;">No</button>
 						</div>
 					</div>
-					<div class="row" ng-show="ishiring&&!showconfirmation">
+					<div class="row form-item" ng-show="isnothiring&&!showconfirmation">
+						<h3 class="col-md-8">Which business are you hiring?</h3>
+						<div class="col-md-4">
+							<div class="dropdown col-md-12 businesslist">
+								<li class="dropdown-toggle" data-toggle="dropdown">
+									<a class="title">Ozfresh007</a>           
+									<i class="fa fa-caret-down right"></i> 
+									<h5>@ Ozfresh Cleaning Consultants</h5>
+									<h5>1 800 655 2365</h5>
+								</li>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">									
+									<li class="dropdown-option special-option" role="menuitem" ng-click="ishiringother = true;">
+										<a>Search for a business<i class="fa fa-search right"></i></a>
+										
+									</li>
+									<li class="dropdown-option" role="menuitem" ng-click="ishiringother = true;">
+										<a>Eduardo Freitas</a>
+										<h5>@ Tabueno Software</h5>
+										<h5>1 800 654 9998</h5>
+									</li>									
+									<li class="dropdown-option" role="menuitem" ng-click="ishiringother = true;">
+										<a>International Printing Services</a>
+										<h5>@ Inernational Printing</h5>
+										<h5>1 800 655 5246</h5>
+									</li>									
+									<li class="dropdown-option" role="menuitem" ng-click="ishiringother = true;">
+										<a>born2try</a>
+										<h5>@ Neightbours Cleaning</h5>
+										<h5>1 800 665 5483</h5>
+									</li>									
+									<li class="dropdown-option special-option" role="menuitem" ng-click="ishiringother = true;">
+										<a>I'm hired someone outsie <br>Servicessling.com.au</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row form-item" ng-show="(ishiring||ishiringother)&&!showconfirmation">
 						<h3 class="col-md-8">When is the job going ahead?</h3>
-						<img class="datewidget col-md-4" src="assets/date-picker.png" />
+						<div class="col-md-4">
+							<div>
+								<div class="dropdown col-md-6">
+									<li class="dropdown-toggle" data-toggle="dropdown">
+										<a class="title">Day</a>            
+										<i class="fa fa-caret-down right"></i>
+									</li>
+									<ul class="dropdown-menu dropdown-menu-left" role="menu">
+										<li><a class="dropdown-option" role="menuitem">1</a></li>
+										<li><a class="dropdown-option" role="menuitem">2</a></li>
+									</ul>
+								</div>
+								<div class="dropdown col-md-6">
+									<li class="dropdown-toggle" data-toggle="dropdown">
+										<a class="title">Month</a>            
+										<i class="fa fa-caret-down right"></i>
+									</li>
+									<ul class="dropdown-menu dropdown-menu-left" role="menu">
+										<li><a class="dropdown-option" role="menuitem">Jan</a></li>
+										<li><a class="dropdown-option" role="menuitem">Feb</a></li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<div class="dropdown col-md-12">
+									<li class="dropdown-toggle" data-toggle="dropdown">
+										<a class="title">Year</a>            
+										<i class="fa fa-caret-down right"></i>
+									</li>
+									<ul class="dropdown-menu dropdown-menu-left" role="menu">
+										<li><a class="dropdown-option" role="menuitem">2015</a></li>
+										<li><a class="dropdown-option" role="menuitem">2016</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>	
 					</div>	
-					<input type="submit" value="Get Protected" ng-class="{inactive: ishiring==false}" ng-click="handleSubmit()" ng-hide="showconfirmation"/>	
+					<input type="submit" value="Get Protected" ng-click="handleSubmit()" ng-hide="showconfirmation||(!ishiring&&!ishiringother)"/>
 					<div class="confirmation" ng-show="showconfirmation">
 						<i class="fa fa-times close-confirmation col-md-1 col-md-offset-11" ng-click="showconfirmation = false"></i>
 						<h3>Thanks for letting us know</h3>

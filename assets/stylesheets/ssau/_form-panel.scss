@@ -9,7 +9,10 @@
 		color: $blue-dark;
 		font-weight: 900;
 		line-height: 36px;
-		padding-bottom: 36px;
+	}
+
+	.form-item {
+		margin-bottom: 36px;
 	}
 
 	.datewidget {
@@ -25,7 +28,8 @@
 		padding: 20px 0;
 		border: none;
 		outline: none;
-		font-family: "prx-nova";
+		font-family: "prx-nova";		
+		margin-top: 16px;
 
 		&.inactive {
 			background: rgba(0,0,0,0.2);
@@ -38,12 +42,96 @@
 		width: 50%;
 		float: left;
 		font-size: 18px;
-		padding: 16px 0;
+		color: $blue-dark;
+		padding: 12px 0;
 		margin-top: 10px;
 		margin-bottom: 35px;
 
+		background: #ECEBEB;
+		border: 1px lightgray solid;
+		border-right: none;
+
+		&:last-child {
+			border-right: 1px lightgray solid;
+		}
+
+		-webkit-box-sizing: border-box;
+
 		&.active {
-			background: $blue-dark
+			background: $blue-dark;
+			color: white;
+		}
+	}
+
+	.dropdown {
+		background: #ECEBEB;
+		margin-top: 14px;
+		padding: 4px 0px;
+		border: 1px lightgray solid;
+		border-right: none;
+
+		&:last-child {
+			border-right: 1px lightgray solid;
+		}
+
+		cursor: pointer;
+
+		.dropdown-toggle {
+			padding: 0 32px;
+			a, i {
+				color: $blue-dark;
+				font-weight: 800;
+				line-height: 36px;
+			}
+		}
+
+		h5 {
+			color: $blue-dark;
+			font-size: 12px;
+			margin-bottom: 3px;
+			opacity: 0.7;
+		}
+
+		.dropdown-menu {
+			background: $blue-dark;
+			min-width: 100%;
+			max-width: 100%;
+			border-top: 1px solid $blue-light;
+
+			.dropdown-option:hover {
+				background: $blue-main;
+			}
+
+		}
+
+		&.open {
+			padding: 5px 1px;
+			border: none;
+			background: $blue-dark;
+
+			a, i, h5 {
+				color: white;
+			}		
+		}
+
+		&.businesslist {
+			padding-bottom: 12px;
+
+			.dropdown-option {
+				padding: 14px 36px;
+				a {
+					padding: 0;
+					max-width: 100%;
+
+					&:hover {
+						background: transparent;
+					}
+				}
+			}
+
+			.special-option {
+				background: $blue-medium;
+			}
 		}
 	}
 
