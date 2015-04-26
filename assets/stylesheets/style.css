@@ -461,7 +461,7 @@ section {
     background: rgba(0, 0, 0, 0.2);
     color: rgba(255, 255, 255, 0.2);
     cursor: default; }
-#formpanel button {
+#formpanel button, #formpanel .grid-option {
   width: 50%;
   float: left;
   font-size: 18px;
@@ -473,9 +473,9 @@ section {
   border: 1px lightgray solid;
   border-right: none;
   -webkit-box-sizing: border-box; }
-  #formpanel button:last-child {
+  #formpanel button:nth-child(2), #formpanel .grid-option:nth-child(2) {
     border-right: 1px lightgray solid; }
-  #formpanel button.active {
+  #formpanel button.active, #formpanel .grid-option.active {
     background: #005581;
     color: white; }
 #formpanel .dropdown {
@@ -511,17 +511,30 @@ section {
     background: #005581; }
     #formpanel .dropdown.open a, #formpanel .dropdown.open i, #formpanel .dropdown.open h5 {
       color: white; }
-  #formpanel .dropdown.businesslist {
-    padding-bottom: 12px; }
-    #formpanel .dropdown.businesslist .dropdown-option {
-      padding: 14px 36px; }
-      #formpanel .dropdown.businesslist .dropdown-option a {
-        padding: 0;
-        max-width: 100%; }
-        #formpanel .dropdown.businesslist .dropdown-option a:hover {
-          background: transparent; }
-    #formpanel .dropdown.businesslist .special-option {
-      background: #0d395c; }
+#formpanel .businesslist .grid-option {
+  padding: 18px 24px;
+  margin: 0;
+  border-bottom: none;
+  cursor: pointer; }
+  #formpanel .businesslist .grid-option:last-child {
+    border-bottom: 1px solid lightgray; }
+  #formpanel .businesslist .grid-option a {
+    font-size: 14px;
+    font-weight: 900;
+    color: #005581; }
+  #formpanel .businesslist .grid-option h5 {
+    margin-bottom: 0;
+    line-height: 1.5em;
+    color: rgba(0, 0, 0, 0.4); }
+  #formpanel .businesslist .grid-option.special-option {
+    width: 100%;
+    text-align: center; }
+  #formpanel .businesslist .grid-option.active {
+    background: #005581; }
+    #formpanel .businesslist .grid-option.active a {
+      color: white; }
+    #formpanel .businesslist .grid-option.active h5 {
+      color: rgba(255, 255, 255, 0.6); }
 #formpanel.confirmed form {
   background: #006da0;
   -webkit-border-radius: 30px;
@@ -579,6 +592,12 @@ section {
       -moz-border-radius: 30px;
       border-radius: 30px;
       border: none; }
+@media screen and (max-width: 700px) {
+  #formpanel .grid-option {
+    width: 100%;
+    border-right: 1px solid lightgray; }
+  #formpanel .confirmation h1 .title {
+    font-size: 28px; } }
 
 #detailspanel .herotext, #detailspanel2 .herotext {
   text-align: center;

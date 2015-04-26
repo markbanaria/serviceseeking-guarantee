@@ -55,11 +55,24 @@ directive('formpanel', function() {
 			$scope.ishiringother = false;
 			$scope.isnothiring = false;
 			$scope.showconfirmation = false;
+			$scope.alt1 = false;
+			$scope.alt2 = false;
+			$scope.alt3 = false;
+			$scope.alt4 = false;
+			$scope.alt5 = false;
 			$scope.handleSubmit = function() {
 				if($scope.ishiring||$scope.ishiringother) {
 					$scope.showconfirmation = true;
 					$('#formpanel').goTo();
 				}
+			}
+
+			$scope.deactivateAll = function() {				
+				$scope.alt1 = false;
+				$scope.alt2 = false;
+				$scope.alt3 = false;
+				$scope.alt4 = false;
+				$scope.alt5 = false;
 			}
 		}
 	}
