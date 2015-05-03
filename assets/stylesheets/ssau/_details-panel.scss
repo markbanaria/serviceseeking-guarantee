@@ -11,7 +11,13 @@
 	.details-box {
 		background: #E2E1E1;
 		padding: 60px;
+		padding-top: 0;
 		margin: 16px;
+
+		h3 {
+			font-size: 40px;
+			padding: 24px 6px;
+		}
 	}
 
 	p, ul li {
@@ -30,13 +36,26 @@
 		padding-top: 30px;
 	}
 
-	p, h3 {
+	p, h3, h5 {
 		padding-left: 6px;
 		padding-right: 6px;
+	}
+
+	h5 {
+	  text-transform: uppercase;
+	  font-weight: 900;
+	  color: $blue-dark;
+	  line-height: 1.5em;		
+	}
+
+	p {
+		margin-bottom: 64px;
 	}
 }
 
 #detailspanel {
+	margin-bottom: 80px;
+
 	&.option3 {
 		padding-top: 180px;
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.85)), url('../images/banner5.jpg');
@@ -89,7 +108,8 @@
 
 		.details-box {
 			background: transparent;
-			padding: 40px 0;
+			padding: 0 0 40px 0;
+			margin-top: 0px;
 		}
 	}
 }

@@ -472,12 +472,18 @@ section {
   background: #ECEBEB;
   border: 1px lightgray solid;
   border-right: none;
-  -webkit-box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out; }
   #formpanel button:nth-child(2), #formpanel .grid-option:nth-child(2) {
     border-right: 1px lightgray solid; }
   #formpanel button.active, #formpanel .grid-option.active {
     background: #005581;
     color: white; }
+  #formpanel button:hover:not(.active), #formpanel .grid-option:hover:not(.active) {
+    opacity: 0.6; }
 #formpanel .dropdown {
   background: #ECEBEB;
   margin-top: 14px;
@@ -609,7 +615,11 @@ section {
 #detailspanel .details-box, #detailspanel2 .details-box {
   background: #E2E1E1;
   padding: 60px;
+  padding-top: 0;
   margin: 16px; }
+  #detailspanel .details-box h3, #detailspanel2 .details-box h3 {
+    font-size: 40px;
+    padding: 24px 6px; }
 #detailspanel p, #detailspanel ul li, #detailspanel2 p, #detailspanel2 ul li {
   font-size: 16px;
   line-height: 1.45em;
@@ -622,20 +632,29 @@ section {
   font-size: 30px;
   line-height: 1.45em;
   padding-top: 30px; }
-#detailspanel p, #detailspanel h3, #detailspanel2 p, #detailspanel2 h3 {
+#detailspanel p, #detailspanel h3, #detailspanel h5, #detailspanel2 p, #detailspanel2 h3, #detailspanel2 h5 {
   padding-left: 6px;
   padding-right: 6px; }
+#detailspanel h5, #detailspanel2 h5 {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #005581;
+  line-height: 1.5em; }
+#detailspanel p, #detailspanel2 p {
+  margin-bottom: 64px; }
 
-#detailspanel.option3 {
-  padding-top: 180px;
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.85)), url("../images/banner5.jpg");
-  background-size: cover;
-  padding-bottom: 32px;
-  background-position: 0% 55%; }
-  #detailspanel.option3 h2 {
-    font-weight: 800; }
-  #detailspanel.option3 h1, #detailspanel.option3 h2, #detailspanel.option3 h3 {
-    color: white; }
+#detailspanel {
+  margin-bottom: 80px; }
+  #detailspanel.option3 {
+    padding-top: 180px;
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.85)), url("../images/banner5.jpg");
+    background-size: cover;
+    padding-bottom: 32px;
+    background-position: 0% 55%; }
+    #detailspanel.option3 h2 {
+      font-weight: 800; }
+    #detailspanel.option3 h1, #detailspanel.option3 h2, #detailspanel.option3 h3 {
+      color: white; }
 
 #detailspanel2 {
   padding-top: 0; }
@@ -658,7 +677,8 @@ section {
     margin-bottom: 0; }
     #detailspanel2.option3 .details-box {
       background: transparent;
-      padding: 40px 0; }
+      padding: 0 0 40px 0;
+      margin-top: 0px; }
 
 #contactpanel {
   background: #E2E1E1;
