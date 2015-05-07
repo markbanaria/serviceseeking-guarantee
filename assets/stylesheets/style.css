@@ -465,11 +465,11 @@ section {
   width: 50%;
   float: left;
   font-size: 18px;
-  color: #005581;
+  color: #006da0;
   padding: 12px 0;
   margin-top: 10px;
   margin-bottom: 35px;
-  background: #ECEBEB;
+  background: white;
   border: 1px lightgray solid;
   border-right: none;
   -webkit-box-sizing: border-box;
@@ -477,13 +477,21 @@ section {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out; }
-  #formpanel button:nth-child(2), #formpanel .grid-option:nth-child(2) {
+  #formpanel button:nth-child(2n), #formpanel .grid-option:nth-child(2n) {
     border-right: 1px lightgray solid; }
   #formpanel button.active, #formpanel .grid-option.active {
     background: #005581;
     color: white; }
   #formpanel button:hover:not(.active), #formpanel .grid-option:hover:not(.active) {
-    opacity: 0.6; }
+    background: rgba(0, 0, 0, 0.12);
+    color: #005581; }
+    #formpanel button:hover:not(.active) h5, #formpanel .grid-option:hover:not(.active) h5 {
+      color: rgba(0, 0, 0, 0.6); }
+  #formpanel button h5, #formpanel .grid-option h5 {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
 #formpanel .dropdown {
   background: #ECEBEB;
   margin-top: 14px;
@@ -499,11 +507,6 @@ section {
       color: #005581;
       font-weight: 800;
       line-height: 36px; }
-  #formpanel .dropdown h5 {
-    color: #005581;
-    font-size: 12px;
-    margin-bottom: 3px;
-    opacity: 0.7; }
   #formpanel .dropdown .dropdown-menu {
     background: #005581;
     min-width: 100%;
@@ -523,7 +526,8 @@ section {
   border-bottom: none;
   cursor: pointer; }
   #formpanel .businesslist .grid-option:last-child {
-    border-bottom: 1px solid lightgray; }
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray; }
   #formpanel .businesslist .grid-option a {
     font-size: 14px;
     font-weight: 900;
@@ -531,7 +535,8 @@ section {
   #formpanel .businesslist .grid-option h5 {
     margin-bottom: 0;
     line-height: 1.5em;
-    color: rgba(0, 0, 0, 0.4); }
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 800; }
   #formpanel .businesslist .grid-option.special-option {
     width: 100%;
     text-align: center; }
@@ -582,7 +587,7 @@ section {
 #formpanel.option3 {
   margin-top: 0;
   padding-top: 0;
-  background: #E2E1E1; }
+  background: white; }
   #formpanel.option3 form {
     background: transparent; }
     #formpanel.option3 form input[type="submit"] {

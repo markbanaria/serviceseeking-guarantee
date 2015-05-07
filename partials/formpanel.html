@@ -12,7 +12,7 @@
 					</div>
 					<div class="row form-item" ng-show="isnothiring&&!showconfirmation">
 						<h3 class="col-md-8">Which business are you hiring?</h3>
-						<div class="col-md-12 businesslist">
+						<ul class="col-md-12 businesslist">
 							<li class="grid-option col-md-4" ng-click="ishiringother = true; deactivateAll(); alt1 = !alt1" ng-class="{active: alt1}">
 								<a class="title">Ozfresh007</a>
 								<h5>@ Ozfresh Cleaning Consultants</h5>
@@ -36,7 +36,7 @@
 							<li class="grid-option special-option col-md-12" ng-click="ishiringother = true; deactivateAll(); alt5 = !alt5" ng-class="{active: alt5}">
 								<a>I hired someone outsie ServiceSeeking.com.au</a>
 							</li>
-						</div>
+						</ul>
 					</div>
 					<div class="row form-item" ng-show="(ishiring||ishiringother)&&!showconfirmation">
 						<h3 class="col-md-8">When is the job going ahead?</h3>

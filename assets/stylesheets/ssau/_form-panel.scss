@@ -42,16 +42,16 @@
 		width: 50%;
 		float: left;
 		font-size: 18px;
-		color: $blue-dark;
+		color: $blue-main;
 		padding: 12px 0;
 		margin-top: 10px;
 		margin-bottom: 35px;
 
-		background: #ECEBEB;
+		background: white;
 		border: 1px lightgray solid;
 		border-right: none;
 
-		&:nth-child(2) {
+		&:nth-child(2n) {
 			border-right: 1px lightgray solid;
 		}
 
@@ -63,13 +63,25 @@
 		}
 
 		&:hover:not(.active) {
-			opacity: 0.6;
+			background: rgba(0,0,0,0.12);
+			color: $blue-dark;
+
+			h5 {
+				color: rgba(0,0,0,0.6);
+			}
 		}
 
 		transition: all 0.2s ease-in-out;
 		-webkit-transition: all 0.2s ease-in-out;
 		-moz-transition: all 0.2s ease-in-out;
 		-o-transition: all 0.2s ease-in-out;
+
+		h5 {
+			transition: all 0.2s ease-in-out;
+			-webkit-transition: all 0.2s ease-in-out;
+			-moz-transition: all 0.2s ease-in-out;
+			-o-transition: all 0.2s ease-in-out;
+		}
 	}
 
 	.dropdown {
@@ -92,13 +104,6 @@
 				font-weight: 800;
 				line-height: 36px;
 			}
-		}
-
-		h5 {
-			color: $blue-dark;
-			font-size: 12px;
-			margin-bottom: 3px;
-			opacity: 0.7;
 		}
 
 		.dropdown-menu {
@@ -133,6 +138,7 @@
 
 			&:last-child {
 				border-bottom: 1px solid lightgray;
+				border-right: 1px solid lightgray;
 			}
 
 			a {
@@ -145,6 +151,7 @@
 				margin-bottom: 0;
 				line-height: 1.5em;
 				color: $k40;
+				font-weight: 800;
 			}
 
 			&.special-option {
@@ -235,7 +242,7 @@
 	&.option3 {
 		margin-top: 0;
 		padding-top: 0;
-		background: #E2E1E1;
+		background: white;
 
 		form {
 			background: transparent;
